@@ -1,21 +1,12 @@
 /* Custom style SCSS */
 
-div {
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
-    color: #333;
-    text-decoration: none;
-    background: '#f4f4f4';
-    padding-top: '10px';
-  }
-
 .main_header{    
-    background: '#f4f4f4';
-    padding-top: '10px';
+    background: #f4f4f4;
+    padding-top: 10px;
 }
 
 .header_links {
-    list-style: 'none';
-    display: 'flex';
-    justify-content: 'space-evenly';
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
 }

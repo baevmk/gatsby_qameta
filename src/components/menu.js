@@ -6,13 +6,7 @@ const Menu = () => (
     <div className = 'main_header'>
 
         <ul className = 'header_links'>
-{/*         
-        <ul style={{
-            listStyle: 'none',
-            display: 'flex',
-            justifyContent: 'space-evenly',
-            }}
-        > */}
+
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/services">Services</Link></li>
@@ -21,6 +15,5 @@ const Menu = () => (
         </ul>      
     </div>
   )
-
 
 export default Menu
