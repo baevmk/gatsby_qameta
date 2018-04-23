@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Header from '../components/header'
-import Menu from '../components/menu'
-// import './index.scss'
+import Header from '../components/Header/header'
+import Menu from '../components/Menu/menu'
+import './index.scss'
 
 
 const Layout = ({ children, data }) => (
