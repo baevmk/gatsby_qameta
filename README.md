@@ -63,3 +63,11 @@ After install configure plugins in gatsby-config.js
   }
 }
 
+## Add typescript
+npm install --save gatsby-plugin-typescript typescript
+##How to use
+Include the plugin in your gatsby-config.js file.
+Add tsconfig.json file on your root directory.
+Write your components in TSX or TypeScript.
+You’re good to go.
+
