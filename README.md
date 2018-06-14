@@ -43,7 +43,8 @@ npm i gatsby-plugin-catch-links - intercept local links from MD and other unReac
 
 After install configure plugins in gatsby-config.js
 
-
+@types/react-helmet
+npm install --save @types/react-helmet
 
 ##using GraphQL to grab markdown files
 
