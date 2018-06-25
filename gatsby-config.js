@@ -1,19 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Snippet',
+    title: "Gatsby Snippet"
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-catch-links',
-    'gatsby-plugin-sass',
-    'gatsby-plugin-typescript',
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-catch-links",
+    "gatsby-plugin-sass",
+    "gatsby-plugin-typescript",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
+        name: "pages"
+      }
     },
-    'gatsby-transformer-remark'
-  ],
-}
+    "gatsby-transformer-remark"
+  ]
+};
