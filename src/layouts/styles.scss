@@ -1,0 +1,113 @@
+@import "../variables.scss";
+
+body {
+  height: 100%;
+  color: $text-color;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#content {
+  height: 100%;
+  margin: 0;
+  font-size: $font-size;
+}
+
+.view {
+  padding: 0 15px;
+  margin: 0 auto;
+  &_narrow {
+    max-width: 1100px;
+  }
+  &-small {
+    max-width: 300px;
+  }
+  &-medium {
+    max-width: 600px;
+  }
+  &-large {
+    max-width: 1200px;
+  }
+}
+
+.link {
+  color: $brand-blue;
+  &:hover {
+    color: $brand-red;
+  }
+  &__no-decoration {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.long-line {
+  word-break: break-word;
+}
+
+.line-nobreak {
+  white-space: nowrap;
+}
+
+.preformated-text {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.noparagraph > p {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+}
+
+.noheader > h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 5px 0;
+  padding: 0;
+  text-indent: 0;
+}
+
+.line-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.list,
+.list-row {
+  list-style: none none;
+  padding: 0;
+  margin: 0;
+
+  &_inline {
+    display: inline-block;
+  }
+}
+
+.text {
+  &_muted {
+    color: $text-muted-color;
+  }
+  &_muted_light {
+    color: $text-muted-light-color;
+  }
+  &_weight_normal {
+    font-weight: normal;
+  }
+}
