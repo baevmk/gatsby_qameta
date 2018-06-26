@@ -7,7 +7,6 @@ interface TemplateProps {
     post: any
 }
 
-
 const Template : React.SFC<TemplateProps> = ({data, post = data.markdownRemark}) => (
 
     <div>

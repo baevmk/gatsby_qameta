@@ -1,0 +1,20 @@
+@import "../../variables.scss";
+
+.Footer {
+  display: flex;
+  background-color: $footer-bg-color;
+  color: $footer-text-color;
+  height: $footer-height;
+  line-height: $footer-height;
+  font-weight: 100;
+  font-size: 16px;
+  justify-content: center;
+  text-align: center;
+  flex-shrink: 0;
+  
+
+  &__copyrights {
+    display: flex;      
+
+  } 
+}

@@ -4,6 +4,8 @@ body {
   height: 100%;
   color: $text-color;
   font-family: sans-serif;
+  display: flex;
+  
 }
 
 * {
@@ -109,5 +111,24 @@ h5 {
   }
   &_weight_normal {
     font-weight: normal;
+  }
+}
+
+
+/* .Site - wrapper, child */
+
+.Site {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+
+
+  &__child {
+    margin: 0;    
+    padding: 0, $gap-size, $gap-size;
+    padding-top: 0;
+    flex: 1 0 auto;
+    
   }
 }
