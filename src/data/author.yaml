@@ -1,0 +1,12 @@
+- id: Dmitry Baev
+  bio: Founder @ Qameta Software. Likes coding, eating and sleeping
+  avatar: avatars/baev.jpeg
+  twitter: "@baevdm"
+- id: Artem Eroshenko
+  bio: Founder @ Qameta Software. Funny guy
+  avatar: avatars/eroshenkoam.jpeg
+  twitter: "@eroshenkoam"
+- id: Stanislav Seliverstov
+  bio: Founder @ Qameta Software. Old man
+  avatar: avatars/sseliverstov.jpeg
+  twitter: "@sseliverstov"

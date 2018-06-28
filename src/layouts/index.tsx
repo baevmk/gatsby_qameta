@@ -1,3 +1,4 @@
+import "prismjs/themes/prism-coy.css";
 import "./styles.scss";
 import * as React from "react";
 import Helmet from "react-helmet";
@@ -5,7 +6,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import * as bem from "b_";
 
-const b = bem.with("Site");
+const b = bem.with("App");
 
 interface DefaultLayoutProps extends React.HTMLProps<HTMLDivElement> {
   location: {
@@ -19,21 +20,18 @@ class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
     return (
       <div className={b()}>
         <Helmet
-          title="My Gatsby TS snippet"
+          title="Qameta software"
           meta={[
-            { name: "description", content: "Sample" },
-            { name: "keywords", content: "sample, something" }
+            { name: "description", content: "Qameta software site" },
           ]}
         />
-        <Header
-          siteTitle="QAmeta.io"
-        />
-        <div className={b("child")}>
-          {this.props.children()}
+        <div className={b("header")}>
+          <Header siteTitle="Qameta software" />
         </div>
-        <Footer 
-          siteCopyrights="QAmeta.io &copy; 2018"
-        />
+        <div className={b("content")}>{this.props.children()}</div>
+        <div className={b("footer")}>
+          <Footer siteCopyrights="Qameta software &copy; 2018" />
+        </div>
       </div>
     );
   }

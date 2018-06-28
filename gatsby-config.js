@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Snippet"
+    title: "Qameta Software",
+    siteUrl: "https://www.qameta.io"
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -10,10 +11,36 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/pages`,
-        name: "pages"
+        name: "pages",
+        path: `${__dirname}/src/pages`
       }
     },
-    "gatsby-transformer-remark"
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "data",
+        path: `${__dirname}/src/data`
+      }
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800
+            }
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null
+            }
+          }
+        ]
+      }
+    }
   ]
 };
