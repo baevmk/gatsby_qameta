@@ -1,0 +1,22 @@
+@import "../../variables.scss";
+
+.BlogPostPreview {
+  display: flex;
+  flex-direction: column;
+
+  border-bottom: 1px solid $border-color;
+  padding-bottom: $gap-size;
+
+  &__title {
+    margin: 0;
+    padding: $gap-size 0;
+  }
+
+  &__excerpt {
+    padding-bottom: $gap-size;
+  }
+
+  &__meta {
+
+  }
+}

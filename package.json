@@ -1,8 +1,12 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "qameta.io",
+  "description": "Qameta Software website",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Dmitry Baev <baev.dm@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@git@github.com:qameta/qameta.io.git"
+  },
   "dependencies": {
     "@types/react-helmet": "^5.0.6",
     "b_": "^1.3.4",
@@ -13,14 +17,14 @@
     "gatsby-plugin-react-helmet": "^2.0.10",
     "gatsby-plugin-sass": "^1.0.26",
     "gatsby-plugin-typescript": "^1.4.20",
+    "gatsby-remark-images": "^1.5.67",
+    "gatsby-remark-prismjs": "^2.0.4",
     "gatsby-source-filesystem": "^1.5.33",
     "gatsby-transformer-remark": "^1.7.40",
+    "prismjs": "^1.15.0",
     "react-helmet": "^5.2.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
+  "license": "UNLICENSED",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
