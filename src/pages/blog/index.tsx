@@ -15,6 +15,7 @@ class BlogPage extends React.PureComponent<{ data: any }> {
 
         {data.allMarkdownRemark.edges.map((post: any) => (
           <BlogPostPreview
+            key={post.node.id}
             excerpt={post.node.excerpt}
             timeToRead={post.node.timeToRead}
             frontmatter={post.node.frontmatter}
@@ -37,7 +38,18 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date
-            author
+            author {
+              id
+              bio
+              twitter
+              avatar {
+                childImageSharp {
+                  resize(width: 32, height: 32, quality: 75) {
+                    src
+                  }
+                }
+              }
+            }
           }
           fields {
             slug

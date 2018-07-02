@@ -38,7 +38,6 @@ export const postQuery = graphql`
       timeToRead
       frontmatter {
         title
-        author
         date
       }
       fields {

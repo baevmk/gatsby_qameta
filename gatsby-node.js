@@ -1,8 +1,9 @@
-const _ = require(`lodash`);
-const Promise = require(`bluebird`);
-const path = require(`path`);
-const parseFilepath = require(`parse-filepath`);
-const slash = require(`slash`);
+const _ = require("lodash");
+const Promise = require("bluebird");
+const path = require("path");
+const parseFilepath = require("parse-filepath");
+const slash = require("slash");
+const slugify = require("slugify");
 
 // convert a string like `/some/long/path/name-of-docs/` to `name-of-docs`
 const slugToAnchor = slug =>
@@ -18,7 +19,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+        filter: { fileAbsolutePath: { ne: null } }
+      ) {
         edges {
           node {
             html
@@ -29,7 +34,15 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             frontmatter {
               title
               date
-              author
+            }
+          }
+        }
+      }
+      allAuthorYaml {
+        edges {
+          node {
+            fields {
+              slug
             }
           }
         }
@@ -43,8 +56,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     console.log(result);
 
     const blogPosts = _.filter(result.data.allMarkdownRemark.edges, edge => {
-      const slug = _.get(edge, `node.fields.slug`);
-      const draft = _.get(edge, `node.frontmatter.draft`);
+      const slug = _.get(edge, "node.fields.slug");
+      const draft = _.get(edge, "node.frontmatter.draft");
       if (!slug) return;
 
       if (_.includes(slug, `/blog/`) && !draft) {
@@ -106,8 +119,13 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       }
     }
     if (slug) {
-      createNodeField({ node, name: `anchor`, value: slugToAnchor(slug) });
-      createNodeField({ node, name: `slug`, value: slug });
+      createNodeField({ node, name: "anchor", value: slugToAnchor(slug) });
+      createNodeField({ node, name: "slug", value: slug });
     }
+  } else if (node.internal.type === "AuthorYaml") {
+    slug = `/contributors/${slugify(node.id, {
+      lower: true
+    })}/`;
+    createNodeField({ node, name: "slug", value: slug });
   }
 };

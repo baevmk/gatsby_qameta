@@ -17,6 +17,17 @@
   }
 
   &__meta {
+    display: flex;
+  }
 
+  &__avatar {
+    display: flex;
+  }
+
+  &__author {
+    padding-left: $gap-size;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
