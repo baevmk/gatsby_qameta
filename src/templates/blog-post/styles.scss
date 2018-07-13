@@ -1,0 +1,17 @@
+@import "../../variables.scss";
+
+.TemplateBlogPost {
+  max-width: 800px;
+  margin: auto;
+  padding: $gap-size;
+
+  &__title {
+    padding: $gap-size 0;
+    border-bottom: 1px solid $border-color;
+  }
+
+  &__content {
+    text-align: justify;
+    line-height: 1.6em;
+  }
+}
